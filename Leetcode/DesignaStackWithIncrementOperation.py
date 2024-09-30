@@ -18,7 +18,6 @@ class CustomStack:
             self.add[self.current_size - 1] += self.add[self.current_size]
         self.add[self.current_size] = 0
         return result
-
     def increment(self, k: int, val: int) -> None:
         
         limit = min(k, self.current_size) - 1  
