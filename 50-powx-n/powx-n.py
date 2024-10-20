@@ -5,5 +5,5 @@ class Solution(object):
         :type n: int
         :rtype: float
         """
-        return pow(x,n)
+        return x ** n
         
