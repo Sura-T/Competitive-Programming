@@ -4,7 +4,8 @@ class Solution:
             return False
         else:
             y = 0
-            while y < x:
+            cx = x
+            while x != 0:
                 y = y * 10 + x % 10
                 x //= 10
-        return x == y or x == y // 10
+        return cx == y
