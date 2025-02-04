@@ -12,13 +12,12 @@ class FrequencyTracker:
         self.val[newFreq] += 1
 
     def deleteOne(self, number: int) -> None:
-        if self.freq[number] == 0:
-            return
-        prevFreq = self.freq[number]
-        self.val[prevFreq] -= 1
-        self.freq[number] -= 1
-        newFreq = self.freq[number]
-        self.val[newFreq] += 1
+        if self.freq[number] != 0:
+            prevFreq = self.freq[number]
+            self.val[prevFreq] -= 1
+            self.freq[number] -= 1
+            newFreq = self.freq[number]
+            self.val[newFreq] += 1
 
     def hasFrequency(self, frequency: int) -> bool:
         return self.val[frequency] > 0
