@@ -1,17 +1,16 @@
-class Solution(object):
-    def sortPeople(self, names, heights):
-        """
-        :type names: List[str]
-        :type heights: List[int]
-        :rtype: List[str]
-        """
-        name_height_pairs = list(zip(names, heights))
+class Solution:
+    def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
+        my_dict = {}
+        res = []
+        result = []
+        for i in range(len(names)):
+            my_dict[heights[i]] = names[i]
+            
+        for key in my_dict:
+            res.append(key)
+        res.sort(reverse=True)
 
-    
-        sorted_pairs = sorted(name_height_pairs, key=lambda x: x[1], reverse=True)
+        for i in res:
+            result.append(my_dict[i])
 
-    
-        sorted_names = [name for name, _ in sorted_pairs]
-        return sorted_names
-
-        
+        return result
