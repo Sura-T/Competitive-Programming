@@ -11,4 +11,3 @@ class Solution:
         return [next_greater[num] for num in nums1]
 
 
-
