@@ -7,7 +7,7 @@
 
 class Solution:
     def reverseOddLevels(self, root: TreeNode) -> TreeNode:
-        def dfs(left: TreeNode, right: TreeNode, level: int):
+        def dfs(left, right, level):
             if not left or not right:
                 return
             
