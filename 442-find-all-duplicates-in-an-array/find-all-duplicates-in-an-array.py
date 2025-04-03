@@ -1,9 +1,21 @@
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
-        res = Counter(nums)
-        output = []
-        for i in res:
-            if res[i] == 2:
-                output.append(i)
+        n = len(nums)
+        arr = []
+        i = 0
+        while i < n:
+            curr = nums[i] - 1
+            if nums[curr] != nums[i]:
+                nums[curr], nums[i] = nums[i], nums[curr]
 
-        return output
+            else:
+
+                i += 1
+
+        for i in range(n):
+            if nums[i] - 1 == i:
+                continue
+            else:
+                arr.append(nums[i])
+                
+        return arr
