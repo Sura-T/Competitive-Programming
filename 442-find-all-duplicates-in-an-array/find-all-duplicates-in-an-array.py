@@ -9,13 +9,10 @@ class Solution:
                 nums[curr], nums[i] = nums[i], nums[curr]
 
             else:
-
                 i += 1
 
         for i in range(n):
-            if nums[i] - 1 == i:
-                continue
-            else:
+            if nums[i] - 1 != i:
                 arr.append(nums[i])
-                
+
         return arr
